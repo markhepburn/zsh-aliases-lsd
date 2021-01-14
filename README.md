@@ -1,59 +1,44 @@
-# zsh-aliases-exa
+# zsh-aliases-lsd
 
-## Purpose
+## Why?
 
-This zsh plugin enables a number of aliases extending `exa`, the modern replacement for `ls`.
+This zsh plugin enables a number of aliases for `lsd` a modern replacement for `ls`, I had previously used [zsh-aliases-exa](https://github.com/DarrinTisdale/zsh-aliases-exa) until recently swapping to `lsd` and at the time of writing couldn't find an oh-my-zsh plugin for `lsd`
 
-## Use
+## Installation
 
-To use it, you should first install [`exa`](https://the.exa.website). You can do so easily using [Homebrew](https://brew.sh) on the Mac:
+Make sure you have [lsd](https://github.com/Peltoche/lsd) installed
 
-```bash
-brew install exa
+### Using an oh-my-zsh plugin manager (recommended)
+
+```
+# for antigen
+antigen bundle 'yuhonas/zsh-aliases-lsd'
+
+# for zplug
+zplug 'yuhonas/zsh-aliases-lsd'
+
+# for zgen
+zgen load 'yuhonas/zsh-aliases-lsd'
+
+# for fisher
+fisher install yuhonas/zsh-aliases-lsd
+
+# for omf
+omf install https://github.com/yuhonas/zsh-aliases-lsd
+
 ```
 
-Next, download this repo into your custom plugins directory. For my installation using [Oh My Zsh](https://ohmyz.sh/), I cloned the repo to `~/.oh-my-zsh/custom/plugins`.
+### Manually
 
-Lastly, add `zsh-aliases-exa` to the plugins array of your zshrc file:
-
-```bash
-plugins=(... zsh-aliases-exa)
-```
+Clone the repository and source it in your shell's rc file.
 
 Restart your zsh session, and the aliases will be available.
 
-## Aliases
+## What aliases does this add?
 
-```bash
-# general use
-alias ls='exa'                                                          # ls
-alias l='exa -lbF --git'                                                # list, size, type, git
-alias ll='exa -lbGF --git'                                             # long list
-alias llm='exa -lbGd --git --sort=modified'                            # long list, modified date sort
-alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
-alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
-
-# specialty views
-alias lS='exa -1'                                                              # one column, just names
-alias lt='exa --tree --level=2'                                         # tree
-
-```
-
-*Note:* the `-d` option removes the display of files, filtering it to only show directories. I cannot identify a time when I want that, so I have not included it.
-
-## Next Steps
-
-* Add in zshrc options to configure options
-  1. color
-  2. date format
-  3. alias profiles
-  4. including git column
-* Create function to configure different profiles of aliases, so that different alias groups can be enabled. For example, one profile may be for replacing `ls`, another may leave those commands alone and use ones based on `exa` only.
+See [zsh-aliases-lsd.plugin.zsh](./zsh-aliases-lsd.plugin.zsh)
 
 ## Thanks
 
-Big thanks to Oh My Zsh, Homebrew, and Exa for these terrific tools. They have made the command line fun again.
+This project was forked from and heavily inspired by [zsh-alises-exa](https://github.com/DarrinTisdale/zsh-aliases-exa)
 
-## Contributors
-
-* [Darrin Tisdale](https://github.com/darrintisdale)
