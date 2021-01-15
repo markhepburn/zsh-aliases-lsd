@@ -9,7 +9,7 @@
 #
 
 alias ls='lsd'
-alias l='lsd --all --long'
+alias l='lsd --almost-all --long'
 alias llm='lsd --timesort --long'
 alias lS='lsd --oneline --classic'
 alias lt='lsd --tree --depth=2'

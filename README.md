@@ -2,13 +2,13 @@
 
 ## Why?
 
-This zsh plugin enables a number of aliases for `lsd` a modern replacement for `ls`, I had previously used [zsh-aliases-exa](https://github.com/DarrinTisdale/zsh-aliases-exa) until recently swapping to `lsd` and at the time of writing couldn't find an oh-my-zsh plugin for `lsd`
+This [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) plugin enables a number of aliases for [lsd](https://github.com/Peltoche/lsd) a modern replacement for ls, I had previously used [zsh-aliases-exa](https://github.com/DarrinTisdale/zsh-aliases-exa) until recently swapping to `lsd` and at the time of writing couldn't find plugin for `lsd`
 
 ## Installation
 
 Make sure you have [lsd](https://github.com/Peltoche/lsd) installed
 
-### Using an oh-my-zsh plugin manager (recommended)
+### Using Plugin Manager (Recommended)
 
 ```
 # for antigen
